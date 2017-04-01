@@ -6,17 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/4 | 姚伟伟的个人空间</title>
+  <title>姚伟伟的个人空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="游戏开发,手游开发,cocos2d-x,unity,H5游戏">
-<meta property="og:type" content="website">
+  <meta name="description" content="pomelo-cocos2d-js-demococos2d-js 是整合了 cocos2d-html5 和 cocos2d-jsb，可以方便的开发部署到各种设备环境中pomelo-cocos2d-js 则是对 pomelo-client-websocket 和 pomelo-cocos2d-jsb 的整合  
+本文以cocos code ide为开发环境说明如何搭建 pomelo 与 cocos2">
+<meta property="og:type" content="article">
 <meta property="og:title" content="姚伟伟的个人空间">
-<meta property="og:url" content="http://yoursite.com/archives/2017/04/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/04/01/pomelo-js/index.html">
 <meta property="og:site_name" content="姚伟伟的个人空间">
-<meta property="og:description" content="游戏开发,手游开发,cocos2d-x,unity,H5游戏">
+<meta property="og:description" content="pomelo-cocos2d-js-demococos2d-js 是整合了 cocos2d-html5 和 cocos2d-jsb，可以方便的开发部署到各种设备环境中pomelo-cocos2d-js 则是对 pomelo-client-websocket 和 pomelo-cocos2d-jsb 的整合  
+本文以cocos code ide为开发环境说明如何搭建 pomelo 与 cocos2">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/b7bc844fgw1eildsxbuytj21150mr77g.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/b7bc844fgw1eile2xa0tfj213g0n3dk7.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/b7bc844fgw1eiljhnslqnj20xr0o5juk.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/b7bc844fgw1eiljjbcz8xj21020jjjvv.jpg">
+<meta property="og:updated_time" content="2016-12-27T02:59:38.210Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="姚伟伟的个人空间">
-<meta name="twitter:description" content="游戏开发,手游开发,cocos2d-x,unity,H5游戏">
+<meta name="twitter:description" content="pomelo-cocos2d-js-demococos2d-js 是整合了 cocos2d-html5 和 cocos2d-jsb，可以方便的开发部署到各种设备环境中pomelo-cocos2d-js 则是对 pomelo-client-websocket 和 pomelo-cocos2d-jsb 的整合  
+本文以cocos code ide为开发环境说明如何搭建 pomelo 与 cocos2">
+<meta name="twitter:image" content="http://ww2.sinaimg.cn/large/b7bc844fgw1eildsxbuytj21150mr77g.jpg">
   
     <link rel="alternative" href="/atom.xml" title="姚伟伟的个人空间" type="application/atom+xml">
   
@@ -156,91 +165,145 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-pomelo-js" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="pomelo-cocos2d-js-demo"><a href="#pomelo-cocos2d-js-demo" class="headerlink" title="pomelo-cocos2d-js-demo"></a>pomelo-cocos2d-js-demo</h1><p>cocos2d-js 是整合了 cocos2d-html5 和 cocos2d-jsb，可以方便的开发部署到各种设备环境中<br>pomelo-cocos2d-js 则是对 pomelo-client-websocket 和 pomelo-cocos2d-jsb 的整合  </p>
+<p>本文以cocos code ide为开发环境说明如何搭建 pomelo 与 cocos2d-js 的开发环境  </p>
+<p>1：下载 cocos code ide<br><a href="http://cocos2d-x.org/download" target="_blank" rel="external">cocos code ide</a>  </p>
+<p>2：下载 cocos2d-js 配置cocos code ide<br><a href="http://cocos2d-x.org/download" target="_blank" rel="external">cocos code ide</a><br><a href="http://www.cocos2d-x.org/wiki/Cocos_Code_IDE" target="_blank" rel="external">cocos_code_ide环境配置</a>  </p>
+<p>3：新建 cocos javascript project<br><img src="http://ww2.sinaimg.cn/large/b7bc844fgw1eildsxbuytj21150mr77g.jpg" alt="">  </p>
+<p>这个时候，可以点击 build runtime 按钮，看是否能够成功编译<br>可以选择 win32 runtime（本文演示的是win32） 或者 android runtime<br><img src="http://ww2.sinaimg.cn/large/b7bc844fgw1eile2xa0tfj213g0n3dk7.jpg" alt="">  </p>
+<p>4：下载 pomelo-cocos2d-js<br>在项目根路径下面执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/Netease/pomelo-cocos2d-js.git --recursive</div></pre></td></tr></table></figure></p>
+<p>5：cocos2d-html5 环境搭建<br>修改index.html<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&quot;frameworks/cocos2d-html5/CCBoot.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script src=&quot;pomelo-cocos2d-js/html5/build/build.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">    require(&apos;boot&apos;);</div><div class="line">&lt;/script&gt; </div><div class="line">&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>6：cocos2d-jsb 环境搭建<br>修改main.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">cc.game.onStart = function() &#123;</div><div class="line">	if (cc.sys.isNative === true) &#123;</div><div class="line">		require(&apos;pomelo-cocos2d-js/index.js&apos;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	cc.view.setDesignResolutionSize(800, 450, cc.ResolutionPolicy.EXACT_FIT);</div><div class="line">	cc.view.resizeWithBrowserSize(true);</div><div class="line">	// load resources</div><div class="line">	cc.LoaderScene.preload(g_resources, function() &#123;</div><div class="line">		cc.director.runScene(new HelloWorldScene());</div><div class="line">	&#125;, this);</div><div class="line">&#125;;</div><div class="line">cc.game.run();</div></pre></td></tr></table></figure></p>
+<p>7：测试chat<br>修改app.js，添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">var pomeloChat = function() &#123;</div><div class="line">	var pomelo = window.pomelo;</div><div class="line"></div><div class="line">	var route = &apos;gate.gateHandler.queryEntry&apos;;</div><div class="line">	var uid = &quot;uid&quot;;</div><div class="line">	var rid = &quot;rid&quot;;</div><div class="line">	var username = &quot;username&quot;;</div><div class="line"></div><div class="line">	pomelo.init(&#123;</div><div class="line">		host: &quot;127.0.0.1&quot;,</div><div class="line">		port: 3014,</div><div class="line">		log: true</div><div class="line">	&#125;, function() &#123;</div><div class="line">		pomelo.request(route, &#123;</div><div class="line">			uid: uid</div><div class="line">		&#125;, function(data) &#123;</div><div class="line">			pomelo.disconnect();</div><div class="line">			pomelo.init(&#123;</div><div class="line">				host: data.host,</div><div class="line">				port: data.port,</div><div class="line">				log: true</div><div class="line">			&#125;, function() &#123;</div><div class="line">				var route = &quot;connector.entryHandler.enter&quot;;</div><div class="line">				pomelo.request(route, &#123;</div><div class="line">					username: username,</div><div class="line">					rid: rid</div><div class="line">				&#125;, function(data) &#123;</div><div class="line">					cc.log(JSON.stringify(data));</div><div class="line">					chatSend();</div><div class="line">				&#125;);</div><div class="line">			&#125;);</div><div class="line">		&#125;);</div><div class="line">	&#125;);</div><div class="line"></div><div class="line">	function chatSend() &#123;</div><div class="line">		var route = &quot;chat.chatHandler.send&quot;;</div><div class="line">		var target = &quot;*&quot;;</div><div class="line">		var msg = &quot;msg&quot;</div><div class="line">			pomelo.request(route, &#123;</div><div class="line">				rid: rid,</div><div class="line">				content: msg,</div><div class="line">				from: username,</div><div class="line">				target: target</div><div class="line">			&#125;, function(data) &#123;</div><div class="line">				cc.log(JSON.stringify(data));</div><div class="line">			&#125;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后在 HelloWorldLayer 的 ctor 里面添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pomeloChat();</div></pre></td></tr></table></figure></p>
+<p>8：本地把chatofpomelo-websocket跑起来  </p>
+<p>9：分别在jsb环境和html5环境测试<br><img src="http://ww4.sinaimg.cn/large/b7bc844fgw1eiljhnslqnj20xr0o5juk.jpg" alt=""><br><img src="http://ww3.sinaimg.cn/large/b7bc844fgw1eiljjbcz8xj21020jjjvv.jpg" alt=""></p>
+<p>注意：该项目只做代码相关演示, cocos2d-js 相关库并没有上传<br>项目下载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/pomelonode/pomelo-cocos2d-js-demo.git --recursive</div></pre></td></tr></table></figure></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/01/loadof/" class="archive-article-date">
-  	<time datetime="2017-04-01T09:30:42.080Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/04/01/pomelo-js/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/01/pomelo-js/" class="archive-article-date">
-  	<time datetime="2017-04-01T09:29:53.051Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/01/hello-world/" class="archive-article-date">
-  	<time datetime="2017-04-01T08:18:13.732Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-01</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/01/hello-world/">Hello World</a>
-    </h1>
+    <a href="/2017/04/01/loadof/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/01/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -263,8 +326,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
